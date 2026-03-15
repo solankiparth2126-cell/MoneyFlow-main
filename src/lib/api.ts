@@ -1,5 +1,5 @@
-export const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://moneyflowapi.runasp.net';
-export const API_BASE_URL = `${BASE_URL}/api`;
+export const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+export const API_BASE_URL = BASE_URL ? `${BASE_URL}/api` : '/api';
 
 interface RequestOptions extends RequestInit {
     headers?: Record<string, string>;
